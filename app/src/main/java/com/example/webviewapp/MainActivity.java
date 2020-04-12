@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         my_webview = findViewById(R.id.My_own_webview);
         my_webview.getSettings().setJavaScriptEnabled(true);
+        my_webview.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 
         /*
         * Rename your App. Tip: Values->Strings
