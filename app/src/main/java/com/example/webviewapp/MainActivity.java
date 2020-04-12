@@ -12,12 +12,27 @@ import androidx.appcompat.widget.Toolbar;
 public class MainActivity extends AppCompatActivity {
 
     private WebView webView;
+
     public void showExternalWebPage(){
-        // TODO: Add your code for showing external web page here
+        WebView my_webview = new WebView (this);
+        setContentView(my_webview);
+
+        my_webview.loadUrl("https://www.his.se/");
+
+        my_webview = findViewById(R.id.My_own_webview);
+        my_webview.getSettings().setJavaScriptEnabled(true);
+        my_webview.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
     }
 
     public void showInternalWebPage(){
-        // TODO: Add your code for showing internal web page here
+        WebView my_webview = new WebView (this);
+        setContentView(my_webview);
+
+        my_webview.loadUrl("https://www.his.se/");
+
+        my_webview = findViewById(R.id.My_own_webview);
+        my_webview.getSettings().setJavaScriptEnabled(true);
+        my_webview.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
     }
 
     @Override
@@ -27,14 +42,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        WebView my_webview = new WebView (this);
-        setContentView(my_webview);
-
-        my_webview.loadUrl("https://www.his.se/");
-
-        my_webview = findViewById(R.id.My_own_webview);
-        my_webview.getSettings().setJavaScriptEnabled(true);
-        my_webview.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 
         /*
         * Rename your App. Tip: Values->Strings
