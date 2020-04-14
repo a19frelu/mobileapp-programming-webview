@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         WebView my_webview = new WebView (this);
         setContentView(my_webview);
 
-        my_webview.loadUrl("https://www.his.se/");
+        my_webview.loadUrl("file:///android_asset/about.html");
 
         my_webview = findViewById(R.id.My_own_webview);
         my_webview.getSettings().setJavaScriptEnabled(true);
