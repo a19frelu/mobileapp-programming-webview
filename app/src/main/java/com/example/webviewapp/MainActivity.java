@@ -14,25 +14,21 @@ public class MainActivity extends AppCompatActivity {
     private WebView webView;
 
     public void showExternalWebPage(){
-        WebView my_webview = new WebView (this);
-        setContentView(my_webview);
 
-        my_webview.loadUrl("https://www.his.se/");
-
-        my_webview = findViewById(R.id.My_own_webview);
+        WebView my_webview = findViewById(R.id.my_own_webview);
         my_webview.getSettings().setJavaScriptEnabled(true);
         my_webview.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+
+        my_webview.loadUrl("https://www.his.se/");
     }
 
     public void showInternalWebPage(){
-        WebView my_webview = new WebView (this);
-        setContentView(my_webview);
 
-        my_webview.loadUrl("file:///android_asset/about.html");
+        WebView my_other_webview = findViewById(R.id.my_internal_webview);
+        my_other_webview.getSettings().setJavaScriptEnabled(true);
+        my_other_webview.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 
-        my_webview = findViewById(R.id.My_own_webview);
-        my_webview.getSettings().setJavaScriptEnabled(true);
-        my_webview.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+        my_other_webview.loadUrl("file:///android_asset/about.html");
     }
 
     @Override
