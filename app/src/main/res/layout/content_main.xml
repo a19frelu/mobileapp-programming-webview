@@ -8,7 +8,7 @@
     tools:showIn="@layout/activity_main">
 
     <WebView
-        android:id="@+id/my_own_webview"
+        android:id="@+id/my_webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,14 +17,5 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
-    <WebView
-        android:id="@+id/my_internal_webview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

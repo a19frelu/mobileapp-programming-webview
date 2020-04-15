@@ -15,20 +15,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void showExternalWebPage(){
 
-        WebView my_webview = findViewById(R.id.my_own_webview);
-        my_webview.getSettings().setJavaScriptEnabled(true);
-        my_webview.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
-
-        my_webview.loadUrl("https://www.his.se/");
+        webView.loadUrl("https://www.his.se/");
     }
 
     public void showInternalWebPage(){
 
-        WebView my_other_webview = findViewById(R.id.my_internal_webview);
-        my_other_webview.getSettings().setJavaScriptEnabled(true);
-        my_other_webview.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
-
-        my_other_webview.loadUrl("file:///android_asset/about.html");
+        webView.loadUrl("file:///android_asset/about.html");
     }
 
     @Override
@@ -38,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        webView = findViewById(R.id.my_webview);
+        webView.getSettings().setJavaScriptEnabled(true);
 
         /*
         * Rename your App. Tip: Values->Strings
@@ -83,11 +77,13 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_external_web) {
             Log.d("==>","Will display external web page");
+            showExternalWebPage();
             return true;
         }
 
         if (id == R.id.action_internal_web) {
             Log.d("==>","Will display internal web page");
+            showInternalWebPage();
             return true;
         }
 
